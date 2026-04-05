@@ -42,7 +42,6 @@
             opacity: 0.6;
             cursor: not-allowed;
             pointer-events: none;
-            /* Prevents clicking */
         }
 
         /* NAVIGATION */
@@ -104,8 +103,6 @@
             color: #555;
             margin-bottom: 30px;
         }
-
-        /* Fixed: Removed the rogue HTML snippet that was here */
 
         .store-badges {
             display: flex;
@@ -234,6 +231,87 @@
             display: block;
         }
 
+        /* SUPPORT & FAQ SECTION */
+        .support-section {
+            padding: 80px 5%;
+            background-color: #fff;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .support-section h2 {
+            font-size: 2.2rem;
+            color: var(--mg-dark);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .support-header-links {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .btn-support {
+            display: inline-block;
+            background: var(--mg-green);
+            color: #fff;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: all 0.2s ease;
+        }
+
+        .btn-support:hover {
+            background: var(--mg-dark);
+        }
+
+        .faq-item {
+            margin-bottom: 15px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .faq-item summary {
+            padding: 18px 20px;
+            background-color: var(--mg-light);
+            font-weight: 600;
+            color: var(--mg-dark);
+            cursor: pointer;
+            list-style: none;
+            /* Removes default triangle */
+            position: relative;
+            font-size: 1.05rem;
+        }
+
+        .faq-item summary::-webkit-details-marker {
+            display: none;
+            /* Removes triangle in older Safari */
+        }
+
+        .faq-item summary::after {
+            content: '+';
+            position: absolute;
+            right: 20px;
+            font-size: 1.5rem;
+            line-height: 1;
+            color: var(--mg-green);
+        }
+
+        .faq-item[open] summary::after {
+            content: '−';
+        }
+
+        .faq-item p {
+            padding: 20px;
+            color: #555;
+            background: #fff;
+            border-top: 1px solid #e0e0e0;
+            margin: 0;
+        }
+
         /* FOOTER */
         footer {
             background: var(--mg-dark);
@@ -270,6 +348,7 @@
         <div class="nav-links">
             <a href="#features">Features</a>
             <a href="#screenshots">Screenshots</a>
+            <a href="#support">Support & FAQ</a>
             <a href="https://keylocksoftware.com">KeyLock Software</a>
         </div>
     </nav>
@@ -279,8 +358,7 @@
             <h1>Ditch the Spreadsheet.<br>Own Your Stats.</h1>
             <p>A fast, simple way to track Golf games with your friends. Enter the Date, Course, Score, Ante, and
                 Win/Loss. <span style="color: var(--mg-green); font-weight: bold;">KeyLock myGolf Journal</span>
-                instantly
-                calculates your Net $ and helps you relive your greatest moments on the course.</p>
+                instantly calculates your Net $ and helps you relive your greatest moments on the course.</p>
 
             <div class="store-badges">
                 <span class="badge badge-disabled"> App Store (Soon)</span>
@@ -328,32 +406,302 @@
     <section class="screenshot-gallery" id="screenshots">
         <h2>Screenshots</h2>
         <div class="screenshot-container">
-
             <div class="screenshot-item">
                 <img src="screenshot_entry.png" alt="myGolf main Entry Screen">
             </div>
-
             <div class="screenshot-item">
                 <img src="screenshot_special_moments.jpg" alt="myGolf Special Moments Entry Screen">
             </div>
-
             <div class="screenshot-item">
                 <img src="screenshot_stats.png" alt="Detailed statistics, Placards, sortable groupings view">
             </div>
-
             <div class="screenshot-item">
                 <img src="screenshot_journal.png" alt="Journal entry with photo moment and round details">
             </div>
-
             <div class="screenshot-item">
                 <img src="screenshot_settings.png" alt="Save, Import & Export actions">
             </div>
-
             <div class="screenshot-item">
                 <img src="screenshot_import.png" alt="Save, Import & Export actions">
             </div>
-
         </div>
+    </section>
+
+    <section class="support-section" id="support">
+        <h2>Support & FAQ</h2>
+
+        <div class="support-header-links">
+            <p style="margin-bottom: 20px; color: #555; font-size: 1.1rem;">Need help with the app or want to report an
+                issue? We're here to assist.</p>
+            <a href="https://jts12215.github.io/KeyLock-myGolf-Website/SUPPORT.html" class="btn-support">Report a Bug /
+                Contact Support</a>
+        </div>
+
+        <h3 style="margin-bottom: 20px; color: var(--mg-dark); text-align: left;">Frequently Asked Questions</h3>
+
+        <details class="faq-item">
+            <summary>How do I import my existing spreadsheet data?</summary>
+            <p>You can seamlessly import your past rounds using a CSV file. Go to the Settings menu in the app, select
+                "Import", and choose your CSV file. The app will automatically try to map your data fields to myGolf.
+                You can change the field mapping for each field via the dropdowns. The import will merge rounds based on
+                the Date and Course Name to try and prevent duplicates.</p>
+        </details>
+
+        <details class="faq-item">
+            <summary>Getting Started: How do I use the KeyLock myGolf Journal?</summary>
+
+            <div style="padding-top: 10px; border: none !important;">
+                Welcome to your new digital golf memory bank! The app is designed to be fast and intuitive. Here is how
+                to get the most out of it from day one:<br><br>
+
+                <strong>Step 1: Log Your First Round</strong><br>
+                Open the app to the <strong>➕ ENTRY</strong> tab. Select your round date, type in the course name, and
+                enter your score. You can also track who you played with (your Group) and any friendly wagers (Ante and
+                Win/Loss) to automatically calculate your net profit for the day.<br><br>
+
+                <strong>Step 2: Capture a "Moment of Glory"</strong><br>
+                Did you sink an amazing Eagle, hit a Hole-in-One, or just have a memorable day on the links? Change the
+                <em>Moment of Glory?</em> dropdown from "Normal Round" to one of the special options. This unlocks extra
+                fields to log the hole number, club used, conditions, witnesses, a written story, and even lets you
+                attach photos from the day!<br><br>
+
+                <strong>Step 3: Review Your Stats</strong><br>
+                Tap over to the <strong>📊 STATS</strong> tab to view your Lifetime and Year-to-Date (YTD) financial
+                net. You can use the dropdown filters at the top to see exactly how you perform at specific courses, in
+                specific years, or with certain groups of friends.<br><br>
+
+                <strong>Step 4: Browse Your Memories</strong><br>
+                The <strong>📜 JOURNAL</strong> tab acts like a personalized social media feed of your golf history. You
+                can scroll through all your past rounds, filter by date, or toggle the "Show Special Moments Only"
+                switch to relive your best shots and view your saved photos.<br><br>
+
+                <div style="margin-left: 25px; margin-bottom: 15px; margin-top: 15px;">
+                    <p style="margin-bottom: 0; margin-top: 0;">💡 <em><strong>Pro-Tip:</strong> Because KeyLock myGolf
+                            respects your privacy, your data is stored securely on your device, not on our servers.
+                            Don't forget to visit the Settings menu occasionally to create a Quick Backup or Full
+                            Archive of your memories!</em></p>
+                </div>
+            </div>
+        </details>
+
+        <details class="faq-item">
+            <summary>How do I print my Journal or save it as a PDF?</summary>
+
+            <div style="padding-top: 10px; border: none !important;">
+                KeyLock myGolf makes it easy to create a beautiful, physical copy or a digital PDF of your golf history
+                directly from the <strong>Journal</strong> or <strong>Stats</strong> tabs:<br><br>
+
+                <strong>Step 1: Filter Your Data</strong><br>
+                Before hitting print, use the tools at the top of the page to customize your report. You can select a
+                specific <strong>Date Range</strong> (like just this past year) or use the <strong>"🌟 Show Special
+                    Moments Only"</strong> switch in the Journal to create a custom highlight reel of your best
+                shots.<br><br>
+
+                <strong>Step 2: Generate the Document</strong><br>
+                Tap the <strong>🖨️ Print / PDF</strong> button at the top right of the screen. The app instantly
+                formats your selected data into a clean, 8.5x11 ready document and opens your device's native Print
+                view.<br><br>
+
+                <strong>Step 3: Print or Save to PDF</strong><br>
+                Once the Print view pops up on your screen, you have two choices:<br><br>
+
+                <div style="margin-left: 25px; margin-bottom: 15px;">
+                    <p style="margin-bottom: 8px; margin-top: 0;">• <strong>To Print:</strong> Simply select your
+                        wireless AirPrint printer and tap Print.</p>
+                    <p style="margin-bottom: 0; margin-top: 0;">• <strong>To Save or Share as a PDF:</strong> Instead of
+                        selecting a printer, tap the <strong>Share icon</strong> (the square with the upward arrow).
+                        From there, you can text the PDF to a friend, save it to your files, email it, or open it
+                        directly in a document reader like Adobe Acrobat!</p>
+                </div>
+            </div>
+        </details>
+
+        <details class="faq-item">
+            <summary>How do I contact support, report a bug, or request a feature?</summary>
+
+            <div style="padding-top: 10px; border: none !important;">
+                If you are experiencing issues, have a question, or want to suggest a new feature, we are here to help!
+                For all support inquiries, please contact us directly via email at
+                <strong>keylock.app@gmail.com</strong>.<br><br>
+
+                <strong>1. Reporting a Bug (The Quickest Way)</strong><br>
+                The absolute best way to report a glitch is from inside the app. Navigate to the <strong>⚙️
+                    SETTINGS</strong> tab and tap the <strong>"🐛 Report a Bug (Email)"</strong> link. This
+                automatically drafts an email for you and includes your exact App Version and Build Number.<br><br>
+
+                If you are emailing us manually from outside the app, please try to include the following details so we
+                can fix the issue faster:<br>
+                <div style="margin-left: 25px; margin-bottom: 15px; margin-top: 5px;">
+                    <p style="margin-bottom: 8px; margin-top: 0;">• <strong>Device & OS:</strong> What phone are you
+                        using? (e.g., iPhone 15 Pro, iOS 17.4)</p>
+                    <p style="margin-bottom: 8px; margin-top: 0;">• <strong>App Version:</strong> You can find this in
+                        the app's Settings under "About Us".</p>
+                    <p style="margin-bottom: 8px; margin-top: 0;">• <strong>Description:</strong> A step-by-step
+                        description of what you were doing when the issue occurred.</p>
+                    <p style="margin-bottom: 8px; margin-top: 0;">• <strong>Expected vs. Actual Result:</strong> Tell us
+                        what you expected to happen, and what actually happened.</p>
+                    <p style="margin-bottom: 0; margin-top: 0;">• <strong>Screenshots:</strong> If applicable, please
+                        attach screenshots of the error or visual issue.</p>
+                </div>
+
+                <strong>2. General Questions & Assistance</strong><br>
+                If you need help understanding a feature, importing your CSV data, or managing your database, please let
+                us know! Be as specific as possible so we can provide the best guidance.<br><br>
+
+                <strong>3. Requesting a Feature</strong><br>
+                We are always looking to improve KeyLock myGolf Journal. If there is a feature or statistic you would
+                love to see tracked, send us an email with the subject line <strong>"Feature Request"</strong>. We
+                review all user suggestions for future updates.<br><br>
+
+                <div style="margin-left: 25px; margin-bottom: 15px; margin-top: 15px;">
+                    <p style="margin-bottom: 0; margin-top: 0;">⚠️ <em><strong>Important Security and Privacy
+                                Notice:</strong> As stated in our Privacy Policy, standard email is not a secure form of
+                            communication. Please do not include sensitive personal information, financial data, or
+                            passwords in your emails. KeyLock Software does not have access to your locally stored golf
+                            data, and our support team will <strong>never</strong> ask you to provide your database file
+                            or cloud login credentials.</em></p>
+                </div>
+            </div>
+        </details>
+
+        <details class="faq-item">
+            <summary>Is my data backed up automatically?</summary>
+            <p>No, your data is not backed up automatically. To ensure 100% privacy, KeyLock myGolf does not connect to
+                any external databases, meaning your golf history lives strictly on your device. Because we have zero
+                access to your data, we cannot restore it if you lose your phone. To keep your history safe, we highly
+                recommend regularly using the Data Export Options in the Settings menu (Export to CSV, Quick Backup, or
+                Full Archive) to save a secure copy to your personal iCloud, Google Drive, or Dropbox.</p>
+        </details>
+
+        <details class="faq-item">
+            <summary>What happens to my data when I upgrade to a new phone?</summary>
+            <p>If you use Apple’s "Device-to-Device Transfer" or "Restore from iCloud Backup" when setting up your new
+                iPhone, your KeyLock myGolf app and all its data will automatically transfer to your new device.
+                However, if you are setting up your phone as a "Brand New Device," you will need to manually restore
+                your data. We highly recommend using the Full Archive export tool to save your database to iCloud Drive
+                or Dropbox before you switch phones, just to be safe!</p>
+        </details>
+
+        <style>
+            /* This forces the website theme to hide all top/bottom divider lines */
+            .faq-item,
+            .faq-item summary,
+            .faq-item div {
+                border: none !important;
+                border-top: none !important;
+                border-bottom: none !important;
+                box-shadow: none !important;
+                outline: none !important;
+            }
+
+            /* Some themes use pseudo-elements for lines, this hides those too */
+            .faq-item::before,
+            .faq-item::after,
+            .faq-item summary::before,
+            .faq-item summary::after {
+                display: none !important;
+            }
+        </style>
+
+        <details class="faq-item">
+            <summary>What is the difference between the three Data Export options?</summary>
+
+            <div style="padding-top: 10px; border: none !important;">
+                Because you own and manage your own data, we provide three distinct ways to export your golf history
+                depending on what you need to do:<br><br>
+
+                📊 <strong>1. Export to CSV (Spreadsheet)</strong><br><br>
+
+                <strong>What it does:</strong> Converts your entire golf journal and stats into a standard spreadsheet
+                file (.csv).<br>
+                <strong>Best for:</strong> Opening your data in Microsoft Excel, Apple Numbers, or Google Sheets. This
+                is perfect if you want to run your own custom math, create personal charts, or print a raw list of all
+                your rounds.<br>
+                <em>Note: Because it is a text-based spreadsheet, this export does not include your photos.</em><br><br>
+
+                💾 <strong>2. Quick Backup (JSON)</strong><br><br>
+
+                <strong>What it does:</strong> Saves a lightweight, raw copy of your app's database.<br>
+                <strong>Best for:</strong> Routine, everyday backups. It is incredibly fast and saves all of your
+                scores, notes, and stats perfectly. If you ever accidentally delete a round, you can use the "Import /
+                Restore Data" button to load this file and instantly recover your text-based history.<br><br>
+
+                📤 <strong>3. Full Archive (ZIP)</strong><br><br>
+
+                <strong>What it does:</strong> Packages your entire database plus all of your saved Special Moment
+                photos into a single, compressed ZIP file.<br>
+                <strong>Best for:</strong> Your "Master Backup." This is the ultimate peace-of-mind export. We recommend
+                running a Full Archive once a month and saving it to your iCloud or Dropbox. If you ever lose your phone
+                or want to manually transfer your profile to a brand-new device, importing this ZIP file will perfectly
+                restore your entire app—photos and all!
+            </div>
+        </details>
+
+        <details class="faq-item">
+            <summary>How do I restore my data from a backup or import a spreadsheet?</summary>
+
+            <div style="padding-top: 10px; border: none !important;">
+                Restoring your data or importing past rounds is simple and can be done right from the app:<br><br>
+
+                <strong>Step 1:</strong> Navigate to the <strong>Settings</strong> menu.<br>
+                <strong>Step 2:</strong> Tap the green <strong>"📥 Import / Restore Data"</strong> button.<br>
+                <strong>Step 3:</strong> Select your backup file from your device, iCloud, Google Drive, or
+                Dropbox.<br><br>
+
+                <strong>How the app handles different file types:</strong><br><br>
+
+                <div style="margin-left: 25px; margin-bottom: 15px;">
+                    <p style="margin-bottom: 8px; margin-top: 0;">• <strong>Full Archive (ZIP) or Quick Backup
+                            (JSON):</strong> Once selected, the app will ask if you want to <strong>Replace</strong> all
+                        current data (perfect for setting up a new phone) or <strong>Merge</strong> the backup with your
+                        existing data (great for recovering a few deleted rounds without losing new ones).</p>
+                    <p style="margin-bottom: 0; margin-top: 0;">• <strong>Spreadsheet (CSV):</strong> If you are
+                        importing a custom spreadsheet from another app or your own records, a smart "mapping" screen
+                        will pop up. This lets you easily match your spreadsheet columns to the app's fields so your
+                        history imports perfectly without creating duplicates.</p>
+                </div>
+            </div>
+        </details>
+
+        <details class="faq-item">
+            <summary>What happens if I delete the app from my phone?</summary>
+            <p>Because the data is stored locally, deleting the app will permanently wipe your database. Always remember
+                to use the Export function to back up your database file before deleting the app or moving to a new
+                device.</p>
+        </details>
+
+        <details class="faq-item">
+            <summary>What does the "Clear All Data" button do?</summary>
+
+            <div style="padding-top: 10px; border: none !important;">
+                The <strong>🗑️ Clear All Data</strong> button at the bottom of the Settings menu acts as a master reset
+                for your app. Using this will permanently erase every single golf round, special moment, and photo
+                currently saved in your KeyLock myGolf Journal.<br><br>
+
+                <strong>When should I use this?</strong><br>
+                This feature is mainly used if you want to completely start fresh, or if you have been logging fake
+                practice rounds to learn how the app works and are finally ready to start entering your real golf
+                history.<br><br>
+
+                <strong>Is it reversible?</strong><br>
+                <strong>No.</strong> Because your data lives exclusively on your device and not on our servers, we have
+                absolutely no way to recover your data once it is deleted.<br><br>
+
+                <div style="margin-left: 25px; margin-bottom: 15px; margin-top: 15px;">
+                    <p style="margin-bottom: 0; margin-top: 0;">⚠️ <em><strong>CRITICAL WARNING:</strong> The app will
+                            ask you twice to confirm before wiping your database, but please ensure you have exported a
+                            <strong>Full Archive (ZIP)</strong> or <strong>Quick Backup (JSON)</strong> to your personal
+                            cloud storage before using this button, just in case you change your mind!</em></p>
+                </div>
+            </div>
+        </details>
+
+        <details class="faq-item">
+            <summary>Does my subscription work on both iOS and Android?</summary>
+            <p>No. Subscriptions are exclusively managed by the Apple App Store and Google Play Store. A subscription
+                purchased on an iPhone will not carry over to an Android device, and vice versa. You will need to
+                purchase a new license if you switch operating systems.</p>
+        </details>
     </section>
 
     <footer>
@@ -363,7 +711,7 @@
         <div style="margin-top: 20px; font-size: 0.9rem;">
             <a href="https://jts12215.github.io/KeyLock-myGolf-Website/PRIVACY-POLICY.html">Privacy Policy</a> |
             <a href="https://jts12215.github.io/KeyLock-myGolf-Website/EULA.html">Terms & Conditions</a> |
-            <a href="support.html">FAQ & Setup</a>
+            <a href="#support">FAQ & Setup</a>
         </div>
 
         <p style="margin-top: 30px; font-size: 0.8rem; opacity: 0.6;">
