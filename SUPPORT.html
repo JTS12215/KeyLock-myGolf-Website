@@ -79,13 +79,17 @@
     </div>
 
     <script>
-        // Grabs the exact version text that index.html saved to memory
-        const currentVersion = localStorage.getItem('myGolf_Version') || "Unknown Version";
+        // 1. Try to grab the version from the URL (bypasses iOS security blocks)
+        const urlParams = new URLSearchParams(window.location.search);
+        let currentVersion = urlParams.get('v');
         
-        // 1. Attaches it to the hidden input so it sends to your Google Sheet
+        // 2. Fallback to memory if URL is empty, then default to Unknown
+        if (!currentVersion) {
+            currentVersion = localStorage.getItem('myGolf_Version') || "Unknown Version";
+        }
+        
+        // 3. Attach it to the hidden input and the visible text
         document.getElementById('hiddenBuildInput').value = currentVersion;
-        
-        // 2. Injects it into the HTML so the user can visually see what version they are on
         document.getElementById('visibleVersionText').innerText = currentVersion;
     </script>
 
