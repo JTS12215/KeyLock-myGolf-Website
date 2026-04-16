@@ -25,16 +25,20 @@
 
     <div class="container">
         
-        <div style="display: flex; align-items: center; justify-content: flex-start; margin-bottom: 10px;">
-            <img src="logo.png" alt="myGolf Logo" style="height: 45px; margin-right: 15px; border-radius: 8px;">
-            <h2 style="color: #1b5e20; margin: 0; font-size: 1.5rem; font-weight: 700;">Contact Support Form</h2>
+        <div style="margin-bottom: 10px;">
+            <img src="logo.png" alt="myGolf Logo" style="height: 50px; margin-bottom: 10px; border-radius: 8px; display: block;">
+            <h2 style="color: #1b5e20; margin: 0; font-size: 1.6rem; font-weight: 700;">Contact Support Form</h2>
         </div>
         
-        <div style="height: 3px; background-color: #1b5e20; margin-bottom: 25px; border-radius: 2px;"></div>
+        <div style="height: 3px; background-color: #1b5e20; margin-bottom: 20px; border-radius: 2px;"></div>
 
-        <p>If you are experiencing issues, have a question, or want to suggest a new feature, we are here to help. Fill out the form below to contact us directly.</p>
+        <p style="margin-bottom: 5px;">If you are experiencing issues, have a question, or want to suggest a new feature, we are here to help. Fill out the form below to contact us directly.</p>
+        
+        <p style="font-size: 0.85rem; color: #666; margin-top: 0; margin-bottom: 25px;">
+            <strong>Currently using:</strong> <span id="visibleVersionText">Loading...</span>
+        </p>
 
-        <form action="https://script.google.com/macros/s/AKfycbwqCmTpgzm__jLJKCOEiG1B6f7TJvTJas8JeIlMy0tGFNA6dc8bMfo3NBVQQO0ZY2IwvA/exec" method="POST" style="background: #f1f8e9; padding: 20px; border-radius: 8px; border: 1px solid #c5e1a5; margin-top: 25px;">
+        <form action="https://script.google.com/macros/s/AKfycbwqCmTpgzm__jLJKCOEiG1B6f7TJvTJas8JeIlMy0tGFNA6dc8bMfo3NBVQQO0ZY2IwvA/exec" method="POST" style="background: #f1f8e9; padding: 20px; border-radius: 8px; border: 1px solid #c5e1a5;">
             <h3 style="margin-top: 0;">Submit a Ticket</h3>
             
             <input type="hidden" name="build" id="hiddenBuildInput" value="">
@@ -77,8 +81,12 @@
     <script>
         // Grabs the exact version text that index.html saved to memory
         const currentVersion = localStorage.getItem('myGolf_Version') || "Unknown Version";
-        // Attaches it to the hidden input in the form
+        
+        // 1. Attaches it to the hidden input so it sends to your Google Sheet
         document.getElementById('hiddenBuildInput').value = currentVersion;
+        
+        // 2. Injects it into the HTML so the user can visually see what version they are on
+        document.getElementById('visibleVersionText').innerText = currentVersion;
     </script>
 
 </body>
