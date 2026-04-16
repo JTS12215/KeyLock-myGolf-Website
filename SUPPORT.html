@@ -5,36 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Support - KeyLock myGolf Journal</title>
     <style>
-        body { font-family: -apple-system, sans-serif; background-color: #f8f9fa; color: #333; line-height: 1.6; padding: 20px; }
+        :root {
+            --golf-green: #1b5e20;
+            --bg: #f8f9fa;
+        }
+        body { font-family: -apple-system, system-ui, sans-serif; background-color: var(--bg); color: #333; line-height: 1.6; padding: 20px; }
         .container { max-width: 600px; margin: 0 auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-        h1, h2, h3 { color: #1b5e20; }
+        h1, h2, h3 { color: var(--golf-green); }
         .form-group { margin-top: 15px; }
         label { display: block; font-weight: bold; font-size: 0.9rem; margin-bottom: 5px; }
         input, textarea { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 8px; box-sizing: border-box; font-family: inherit; }
-        button { background: #1b5e20; color: white; border: none; padding: 15px; border-radius: 8px; font-weight: bold; font-size: 1rem; width: 100%; margin-top: 20px; cursor: pointer; }
+        button { background: var(--golf-green); color: white; border: none; padding: 15px; border-radius: 8px; font-weight: bold; font-size: 1rem; width: 100%; margin-top: 20px; cursor: pointer; }
         .warning-box { background: #fff3cd; border-left: 4px solid #ffc107; padding: 15px; margin-top: 30px; font-size: 0.85rem; border-radius: 8px; }
-        .home-link { display: inline-block; margin-top: 20px; color: #1b5e20; font-weight: bold; text-decoration: none; }
-        
-        /* FAQ Styles */
-        .faq-item { background: #f1f8e9; padding: 15px; border-radius: 8px; border: 1px solid #c5e1a5; margin-bottom: 15px; }
-        .faq-item summary { font-weight: bold; color: #1b5e20; outline: none; cursor: pointer; font-size: 1.05rem; }
-        .faq-item summary::-webkit-details-marker { color: #1b5e20; }
+        .home-link { display: inline-block; margin-top: 20px; color: var(--golf-green); font-weight: bold; text-decoration: none; }
     </style>
 </head>
 <body>
 
     <div class="container">
         
-        <div style="margin-bottom: 10px;">
-            <img src="logo.png" alt="myGolf Logo" style="height: 50px; margin-bottom: 10px; border-radius: 8px; display: block;">
-            <h2 style="color: #1b5e20; margin: 0; font-size: 1.6rem; font-weight: 700;">Contact Support Form</h2>
+        <div style="display: flex; align-items: center; padding: 5px 0;">
+            <img src="logo.png" alt="myGolf Logo" style="height: 75px; width: auto; mix-blend-mode: multiply; display: block;">
         </div>
         
-        <div style="height: 3px; background-color: #1b5e20; margin-bottom: 20px; border-radius: 2px;"></div>
+        <div style="display: flex; justify-content: flex-start; align-items: flex-end; margin-bottom: 15px; padding-bottom: 3px; border-bottom: 3px solid var(--golf-green); position: relative;">
+            <h3 style="margin: 0; color: var(--golf-green); font-size: 1.2rem; font-weight: 900; letter-spacing: 0.2px; line-height: 1; padding-bottom: 2px;">Contact Support Form</h3>
+        </div>
 
         <p style="margin-bottom: 5px;">If you are experiencing issues, have a question, or want to suggest a new feature, we are here to help. Fill out the form below to contact us directly.</p>
         
-        <p style="font-size: 0.85rem; color: #666; margin-top: 0; margin-bottom: 25px;">
+        <p style="font-size: 0.85rem; color: #666; margin-top: 0; margin-bottom: 10px;">
             <strong>Currently using:</strong> <span id="visibleVersionText">Loading...</span>
         </p>
 
