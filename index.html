@@ -73,6 +73,59 @@
             color: var(--mg-green);
         }
 
+        /* Mobile Toggle Icon (Hidden on Desktop) */
+        .mobile-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+
+        .mobile-toggle .bar {
+            width: 25px;
+            height: 3px;
+            background-color: var(--mg-dark);
+            border-radius: 3px;
+            transition: all 0.3s ease;
+        }
+
+        /* MOBILE NAVIGATION FIX */
+        @media (max-width: 768px) {
+            .mobile-toggle {
+                display: flex; /* Show hamburger on mobile */
+            }
+
+            .nav-links {
+                display: none; /* Hide standard links by default */
+                position: absolute;
+                top: 90px; /* Sits right below the 90px header */
+                left: 0;
+                width: 100%;
+                background: white;
+                box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+                flex-direction: column;
+                text-align: center;
+                padding: 20px 0;
+                z-index: 999;
+                border-bottom: 3px solid var(--mg-green);
+            }
+
+            /* This class is added by JavaScript when the button is clicked */
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links a {
+                margin: 15px 0; /* Spaces the links out vertically for easy tapping */
+                font-size: 1.1rem;
+            }
+
+            /* Cool animation to turn the hamburger into an 'X' when open */
+            .mobile-toggle.is-active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+            .mobile-toggle.is-active .bar:nth-child(2) { opacity: 0; }
+            .mobile-toggle.is-active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+        }
+
         /* HERO SECTION */
         .hero {
             display: flex;
@@ -315,7 +368,7 @@
         /* FOOTER */
         footer {
             /* Matches the Hero Section Gradient */
-            background: linear-gradient(180deg, #fff 0%, var(--mg-light) 100%); 
+            background: linear-gradient(180deg, #fff 0%, var(--mg-light) 50%); 
             /* Matched to the 3px Nav Bar thickness */
             border-top: 3px solid var(--mg-green); 
             color: var(--mg-dark); 
@@ -409,7 +462,14 @@
         <a href="#" class="brand">
             <img src="logo.png" alt="myGolf Logo">
         </a>
-        <div class="nav-links">
+        
+        <div class="mobile-toggle" id="mobile-toggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <div class="nav-links" id="nav-links">
             <a href="#features">Features</a>
             <a href="#screenshots">Screenshots</a>
             <a href="#support">Support & FAQ</a>
@@ -652,7 +712,7 @@
                 <strong>Best for:</strong> Opening your data in Microsoft Excel, Apple Numbers, or Google Sheets. This
                 is perfect if you want to run your own custom math, create personal charts, or print a raw list of all
                 your rounds.<br>
-                <em>Note: Because it is a text-based spreadsheet, this export does not include your photos.</em><br><br>               
+                <em>Note: Because it is a text-based spreadsheet, this export does not include your photos.</em><br><br>                
 
                 📤 <strong>2. Full Archive (ZIP)</strong><br><br>
 
@@ -774,6 +834,26 @@
             &copy; 2026 John Stone dba KeyLock Software.<br>All Rights Reserved.
         </p>
     </footer>
+
+    <script>
+        const mobileToggle = document.getElementById('mobile-toggle');
+        const navLinks = document.getElementById('nav-links');
+        const navItems = document.querySelectorAll('.nav-links a');
+
+        // Toggle menu when clicking the hamburger
+        mobileToggle.addEventListener('click', () => {
+            mobileToggle.classList.toggle('is-active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Close the menu automatically when a link is tapped
+        navItems.forEach(item => {
+            item.addEventListener('click', () => {
+                mobileToggle.classList.remove('is-active');
+                navLinks.classList.remove('active');
+            });
+        });
+    </script>
 
 </body>
 
