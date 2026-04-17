@@ -376,6 +376,26 @@
             color: #555; 
             font-weight: 500;
         }
+
+        /* --- MOBILE RESPONSIVE FOOTER FIXES --- */
+        @media (max-width: 600px) {
+            .footer-brand {
+                gap: 10px; /* Tighter gap between logo and text */
+            }
+            .footer-logo {
+                height: 32px; /* Scaled down for mobile */
+            }
+            footer h3 {
+                font-size: 1.15rem; /* Scaled down to prevent the word 'Journal' from wrapping */
+            }
+            .footer-links {
+                font-size: 0.75rem; /* Shrinks the links to fit on one line */
+                gap: 8px; /* Brings the links closer together */
+            }
+            .footer-copyright {
+                font-size: 0.75rem; /* Shrinks copyright text */
+            }
+        }
     </style>
 </head>
 
@@ -751,7 +771,7 @@
         </div>
 
         <p class="footer-copyright">
-            &copy; 2026 John Stone dba KeyLock Software. All Rights Reserved.
+            &copy; 2026 John Stone dba KeyLock Software.<br>All Rights Reserved.
         </p>
     </footer>
 
