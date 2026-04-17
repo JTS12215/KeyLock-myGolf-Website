@@ -314,23 +314,59 @@
 
         /* FOOTER */
         footer {
-            background: var(--mg-dark);
-            color: white;
+            background: var(--mg-light); /* Matches Screenshots section */
+            border-top: 2px solid var(--mg-green); /* Subtle separator line */
+            color: var(--mg-dark); 
             text-align: center;
-            padding: 50px 10%;
+            padding: 40px 5%;
         }
 
-        footer h2 {
+        .footer-brand {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
             margin-bottom: 5px;
         }
 
+        .footer-logo {
+            height: 45px; /* Perfectly scaled to sit next to the H2 */
+            width: auto;
+            mix-blend-mode: multiply; /* Removes any white background on the logo */
+            border-radius: 8px;
+        }
+
+        footer h2 {
+            margin: 0;
+            color: var(--mg-dark);
+            font-size: 1.8rem;
+        }
+
         footer a {
-            color: var(--mg-gold);
+            color: var(--mg-dark); /* Replaced Gold with Dark Green for readability */
             text-decoration: none;
+            font-weight: 600;
         }
 
         footer a:hover {
+            color: var(--mg-green);
             text-decoration: underline;
+        }
+
+        .footer-links {
+            margin-top: 25px; 
+            font-size: 0.95rem;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .footer-copyright {
+            margin-top: 30px; 
+            font-size: 0.85rem; 
+            color: #555; /* Medium gray ensures it is easy to read */
+            font-weight: 500;
         }
     </style>
 </head>
@@ -691,16 +727,22 @@
     </section>
 
     <footer>
-        <h2>KeyLock myGolf Journal</h2>
-        <p style="margin: 15px 0;">by <a href="https://keylocksoftware.com">KeyLock Software</a></p>
+        <div class="footer-brand">
+            <img src="logo.png" alt="myGolf Logo" class="footer-logo">
+            <h2>KeyLock myGolf Journal</h2>
+        </div>
+        
+        <p style="margin: 5px 0; color: #555; font-weight: 500;">by <a href="https://keylocksoftware.com">KeyLock Software</a></p>
 
-        <div style="margin-top: 20px; font-size: 0.9rem;">
-            <a href="https://jts12215.github.io/KeyLock-myGolf-Website/PRIVACY-POLICY.html">Privacy Policy</a> |
-            <a href="https://jts12215.github.io/KeyLock-myGolf-Website/EULA.html">Terms & Conditions</a> |
+        <div class="footer-links">
+            <a href="https://jts12215.github.io/KeyLock-myGolf-Website/PRIVACY-POLICY.html">Privacy Policy</a>
+            <span style="color:#ccc;">|</span>
+            <a href="https://jts12215.github.io/KeyLock-myGolf-Website/EULA.html">Terms & Conditions</a>
+            <span style="color:#ccc;">|</span>
             <a href="#support">FAQ & Setup</a>
         </div>
 
-        <p style="margin-top: 30px; font-size: 0.8rem; opacity: 0.6;">
+        <p class="footer-copyright">
             &copy; 2026 John Stone dba KeyLock Software. All Rights Reserved.
         </p>
     </footer>
