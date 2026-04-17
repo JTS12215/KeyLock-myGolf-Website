@@ -314,8 +314,10 @@
 
         /* FOOTER */
         footer {
-            background: var(--mg-light); /* Matches Screenshots section */
-            border-top: 2px solid var(--mg-green); /* Subtle separator line */
+            /* Matches the Hero Section Gradient */
+            background: linear-gradient(180deg, #fff 0%, var(--mg-light) 100%); 
+            /* Matched to the 3px Nav Bar thickness */
+            border-top: 3px solid var(--mg-green); 
             color: var(--mg-dark); 
             text-align: center;
             padding: 40px 5%;
@@ -330,9 +332,9 @@
         }
 
         .footer-logo {
-            height: 45px; /* Perfectly scaled to sit next to the H2 */
+            height: 45px; 
             width: auto;
-            mix-blend-mode: multiply; /* Removes any white background on the logo */
+            mix-blend-mode: multiply; 
             border-radius: 8px;
         }
 
@@ -343,7 +345,7 @@
         }
 
         footer a {
-            color: var(--mg-dark); /* Replaced Gold with Dark Green for readability */
+            color: var(--mg-dark); 
             text-decoration: none;
             font-weight: 600;
         }
@@ -365,7 +367,7 @@
         .footer-copyright {
             margin-top: 30px; 
             font-size: 0.85rem; 
-            color: #555; /* Medium gray ensures it is easy to read */
+            color: #555; 
             font-weight: 500;
         }
     </style>
