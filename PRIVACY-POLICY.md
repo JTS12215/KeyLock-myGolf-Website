@@ -1,3 +1,7 @@
+---
+title: KeyLock myGolf Journal - Software Privacy Policy
+---
+
 # Software Privacy Policy
 
 **Last Updated: March 30, 2026**
