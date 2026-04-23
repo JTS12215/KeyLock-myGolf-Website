@@ -1,6 +1,20 @@
 ---
 layout: null
 ---
+<style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    line-height: 1.6;
+    color: #333;
+  }
+  h1, h2 {
+    border-bottom: 1px solid #eaeaea;
+    padding-bottom: 10px;
+  }
+</style>
 
 # KeyLock myGolf Journal - Software Privacy Policy
 
