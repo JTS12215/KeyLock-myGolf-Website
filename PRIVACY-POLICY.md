@@ -16,7 +16,9 @@ layout: null
   }
 </style>
 
-# KeyLock myGolf Journal - Software Privacy Policy
+# KeyLock myGolf Journal 
+
+# Software Privacy Policy
 
 **Last Updated: March 30, 2026**
 
