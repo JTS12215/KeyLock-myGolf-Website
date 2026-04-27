@@ -563,11 +563,41 @@
         <h3 style="margin-bottom: 20px; color: var(--mg-dark); text-align: left;">Frequently Asked Questions</h3>
 
         <details class="faq-item">
-            <summary>How do I import my existing spreadsheet data?</summary>
-            <p>You can seamlessly import your past rounds using a CSV file. Go to the Settings menu in the app, select
-                "Import", and choose your CSV file. The app will automatically try to map your data fields to myGolf.
-                You can change the field mapping for each field via the dropdowns. The import will merge rounds based on
-                the Date and Course Name to try and prevent duplicates.</p>
+            <summary>How do I prepare and import my spreadsheet data?</summary>
+            
+            <p>If you currently have your golf records saved in a standard Excel or Numbers spreadsheet (which usually ends in <code>.xlsx</code> or <code>.numbers</code>), you will need to save a copy of it as a <strong>CSV</strong> (Comma Separated Values) file.</p>
+            
+            <p>A CSV file strips away all the visual styling and leaves just the raw data, which is exactly what our import tool needs to read your history correctly. You can keep your original beautifully formatted spreadsheet for your own records, and use the new CSV file strictly for this import.</p>
+            
+            <p>To ensure your golf rounds import perfectly into myGolf Journal, your CSV needs to be completely clean.</p>
+            
+            <p><strong>The Golden Rules of Importing:</strong></p>
+            <ul style="margin-top: 5px; margin-bottom: 15px; padding-left: 20px;">
+                <li style="margin-bottom: 8px;"><strong>No Titles or Blank Rows:</strong> Row 1 must be your column headers. Delete any overarching titles (like "2025 Golf Rounds") or blank rows at the very top of the sheet.</li>
+                <li style="margin-bottom: 8px;"><strong>No Subtotals or Formulas:</strong> Remove any "Yearly Totals" or SUM formulas at the bottom of the sheet. Only include actual rows of golf rounds.</li>
+                <li style="margin-bottom: 8px;"><strong>Date Formatting:</strong> Ensure your dates are formatted consistently (e.g., MM/DD/YYYY).</li>
+                <li style="margin-bottom: 8px;"><strong>Save as CSV:</strong> When you are done cleaning up the file, make sure you use "Save As" or "Export" to save the file strictly as a <code>.csv</code> file.</li>
+            </ul>
+            
+            <p><strong>Expected Column Headers:</strong><br>
+            <em style="font-size: 0.9em; color: #555;">(Note: Your columns do not need to be in this exact order, nor do you need to include every single field. As long as the header names are close, our tool will recognize them.)</em><br> 
+            While the app can import many more data points, these are the core fields you should have for your initial import:</p>
+            
+            <ul style="margin-top: 5px; margin-bottom: 15px; padding-left: 20px;">
+                <li>Date</li>
+                <li>Course</li>
+                <li>Score</li>
+                <li>Group</li>
+                <li>Ante</li>
+                <li>Win/Loss</li>
+            </ul>
+            
+            <p style="background-color: #f9f9f9; padding: 10px; border-left: 4px solid #4CAF50; margin-bottom: 15px;">
+                💡 <strong>Pro-Tip:</strong> If your spreadsheet has gaps or missing data, it is much easier and faster to fill those blanks in using Excel <em>before</em> you import the file into the app!
+            </p>
+        
+            <p><strong>Ready to Import?</strong><br>
+            Go to the <strong>Settings</strong> menu in the app, select <strong>"Import"</strong>, and choose your new CSV file. The app will automatically try to map your data fields, and you can adjust them via the dropdowns. The import will intelligently merge rounds based on the Date and Course Name to prevent duplicates.</p>
         </details>
 
         <details class="faq-item">
