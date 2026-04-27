@@ -18,6 +18,8 @@ layout: null
 
 # END USER LICENSE AGREEMENT (“License”)
 
+**Last updated on: April 27, 2026
+
 **1. GRANT OF LICENSE:** Subject to your payment of the applicable subscription fees through the applicable app store (Apple App Store or Google Play Store) and your compliance with the terms of this License, John Stone dba KeyLock Software ("Licensor" or “KeyLock Software”) grants you a non-exclusive, non-transferable, non-assignable, revocable license to install and use KeyLock myGolf Journal (“Software”) on any compatible device owned or controlled by you within that specific platform ecosystem.
 
 Licenses and payments are managed by the platform provider (Apple or Google) and are subject to the terms and conditions of such platform. A subscription purchased on one platform (e.g., iOS®) does not grant access to the Software on a different platform (e.g., Android®). Users moving between platforms must purchase a new subscription through the applicable app store.
