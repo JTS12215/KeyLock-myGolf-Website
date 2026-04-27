@@ -18,7 +18,7 @@ layout: null
 
 # SOFTWARE PRIVACY POLICY
 
-**Last updated on: April 27, 2026
+#### Last updated on: April 27, 2026
 
 This Privacy Policy (“Privacy Policy”) describes and applies to the information we collect from you when you use KeyLock myGolf Journal (“Software”). The terms “we,” “our,” and “us” in this Privacy Policy refer to John Stone dba KeyLock Software (“KeyLock Software”). Our Privacy Policy generally describes how we collect, share, use, and protect your information.
 
