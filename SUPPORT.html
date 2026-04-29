@@ -78,13 +78,15 @@
         <p style="margin-bottom: 5px;">If you are experiencing issues, have a question, or want to suggest a new feature, we are here to help. Fill out the form below to contact us directly.</p>
         
         <p style="font-size: 0.85rem; color: #666; margin-top: 0; margin-bottom: 25px;">
-            <strong>Currently using:</strong> <span id="visibleVersionText">Loading...</span>
+            <strong>Currently using:</strong> <span id="visibleVersionText">Loading...</span><br>
+            <strong>Support ID:</strong> <span id="visibleSupportIdText">Not Provided</span>
         </p>
 
         <form action="https://script.google.com/macros/s/AKfycbwqCmTpgzm__jLJKCOEiG1B6f7TJvTJas8JeIlMy0tGFNA6dc8bMfo3NBVQQO0ZY2IwvA/exec" method="POST" style="background: #f1f8e9; padding: 18px; border-radius: 12px; border: 1px solid #c5e1a5;">
             <h3 style="margin-top: 0;">Submit a Ticket</h3>
             
             <input type="hidden" name="build" id="hiddenBuildInput" value="">
+            <input type="hidden" name="supportId" id="hiddenSupportIdInput" value="">
 
             <div class="form-group">
                 <label>Your Email Address *</label>
@@ -122,18 +124,23 @@
     </div>
 
     <script>
-        // 1. Try to grab the version from the URL (bypasses iOS security blocks)
         const urlParams = new URLSearchParams(window.location.search);
-        let currentVersion = urlParams.get('v');
         
-        // 2. Fallback to memory if URL is empty, then default to Unknown
+        // 1. Version Logic
+        let currentVersion = urlParams.get('v');
         if (!currentVersion) {
             currentVersion = localStorage.getItem('myGolf_Version') || "Unknown Version";
         }
-        
-        // 3. Attach it to the hidden input and the visible text
         document.getElementById('hiddenBuildInput').value = currentVersion;
         document.getElementById('visibleVersionText').innerText = currentVersion;
+
+        // 2. Support ID Logic
+        let supportId = urlParams.get('userid');
+        if (!supportId) {
+            supportId = "Not Provided";
+        }
+        document.getElementById('hiddenSupportIdInput').value = supportId;
+        document.getElementById('visibleSupportIdText').innerText = supportId;
     </script>
 
 </body>
