@@ -79,7 +79,7 @@
         
         <p style="font-size: 0.85rem; color: #666; margin-top: 0; margin-bottom: 25px;">
             <strong>Currently using:</strong> <span id="visibleVersionText">Loading...</span><br>
-            <strong>Support ID:</strong> <span id="visibleSupportIdText">Not Provided</span>
+            <strong>Support ID:</strong> <span id="visibleSupportIdText" style="word-break: break-all; display: inline-block; vertical-align: top;">Not Provided</span>
         </p>
 
         <form action="https://script.google.com/macros/s/AKfycbwqCmTpgzm__jLJKCOEiG1B6f7TJvTJas8JeIlMy0tGFNA6dc8bMfo3NBVQQO0ZY2IwvA/exec" method="POST" style="background: #f1f8e9; padding: 18px; border-radius: 12px; border: 1px solid #c5e1a5;">
@@ -87,6 +87,11 @@
             
             <input type="hidden" name="build" id="hiddenBuildInput" value="">
             <input type="hidden" name="supportId" id="hiddenSupportIdInput" value="">
+
+            <div class="form-group">
+                <label>Name (Optional)</label>
+                <input type="text" name="name" placeholder="e.g., John Doe">
+            </div>
 
             <div class="form-group">
                 <label>Your Email Address *</label>
