@@ -13,6 +13,10 @@
             padding: 0;
         }
 
+        html {
+            scroll-padding-top: 90px; /* Ensures anchor links clear the fixed header */
+        }
+
         :root {
             --mg-green: #2e7d32;
             --mg-dark: #1b5e20;
@@ -26,6 +30,7 @@
             line-height: 1.6;
             color: var(--kl-dark);
             background-color: #fff;
+            padding-top: 90px; /* Prevents hero section from hiding under fixed header */
         }
 
         /* COMING SOON BANNER */
@@ -46,6 +51,11 @@
 
         /* NAVIGATION */
         nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
             background: #ffffff;
             border-bottom: 3px solid var(--mg-green);
             display: flex;
@@ -453,12 +463,6 @@
 </head>
 
 <body>
-
-    <!--  Under Construction Banner -------------------
-    <div class="coming-soon-banner">
-        🚧 <strong>UNDER DEVELOPMENT:</strong> KeyLock myGolf Journal is coming soon to iOS and Android! 🚧
-    </div>
-    -->
 
     <nav>
         <a href="#" class="brand">
